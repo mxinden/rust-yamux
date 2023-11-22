@@ -113,8 +113,9 @@ pub struct Config {
 impl Default for Config {
     fn default() -> Self {
         Config {
-            receive_window: DEFAULT_CREDIT,
-            max_buffer_size: 1024 * 1024,
+            receive_window: 16 * 1024 * 1024,
+            max_buffer_size: 16*1024*1024,
+            // TODO
             max_num_streams: 8192,
             window_update_mode: WindowUpdateMode::OnRead,
             read_after_close: true,
